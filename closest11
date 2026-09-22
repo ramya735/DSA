@@ -1,0 +1,11 @@
+a = list(map(int, input().split()))
+t = int(input())
+
+best = (a[0], a[1])
+
+for i in range(len(a)):
+    for j in range(i + 1, len(a)):
+        if abs(a[i] + a[j] - t) < abs(best[0] + best[1] - t):
+            best = (a[i], a[j])
+
+print(*best)

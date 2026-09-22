@@ -1,0 +1,7 @@
+a = list(map(int,input().split()))
+mn = a[0]
+diff = 0
+for x in a[1:]:
+    diff = max(diff,x-mn)
+    mn = min(mn,x)
+print(diff)

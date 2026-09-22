@@ -1,0 +1,8 @@
+a = list(map(int,input().split()))
+count = 0
+candidate = None
+for x in a:
+    if count ==0:
+        candidate = x
+    count +=1 if x ==candidate else -1
+print(candidate)
